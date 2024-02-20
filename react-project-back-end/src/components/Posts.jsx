@@ -8,12 +8,14 @@ import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { useNavigate } from "react-router-dom";
 
 
 export default function MyPost() {
   const [posts, setPosts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredPosts, setFilteredPosts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(url + "posts?_embed")
@@ -52,7 +54,7 @@ export default function MyPost() {
             <Card
               key={post.id}
               className="col-lg-3 col-md-5 col-sm-12 mx-lg-1 mx-md-2 mx-sm-1 my-1"
-              style={{ height: "28 rem", width: "22rem" }}
+              style={{ height: "26rem", width: "22rem" }}
             >
               <Card.Img variant="top" src={post._embedded['wp:featuredmedia']['0'].source_url} />
               <Card.Body className="pb-0">
@@ -69,7 +71,12 @@ export default function MyPost() {
                       <i className="bi bi-dot mx-0"></i>
                       {post.date.slice(0, -9)}
                     </div>
-                    <Button variant="danger p-1 px-2 my-2 me-4">Read more</Button>
+                    <Button 
+                      variant="danger p-1 px-2 my-2 me-4"
+                      onClick={() => navigate(`/posts/${post.id}`)}
+                      >
+                      Read more
+                      </Button>
                   </div>
                 </div>
                 
