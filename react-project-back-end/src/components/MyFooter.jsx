@@ -8,7 +8,7 @@ import img from '../assets/img/app_store_google_play.png'
 export default function MyFooter() {
   return (
     <>
-        <footer className='container text-uppercase mt-4'>
+        <footer className='container text-uppercase mt-4 py-5 border-top'>
             <Row>
                 <Col md={5} className='d-flex lh-lg'>
                     <div className='d-flex flex-column '>

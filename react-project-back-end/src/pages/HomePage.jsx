@@ -9,9 +9,9 @@ export default function HomePage() {
   return (
     <>
         <MyNavbar />
-        <Container>
-            <Posts />
-        </Container>
+            <Container>
+              <Posts />
+            </Container>
         <MyFooter />
     </>
   )
