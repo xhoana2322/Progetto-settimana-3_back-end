@@ -1,33 +1,30 @@
 import React from 'react'
 import { Navbar, Container, Nav, NavDropdown, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import img from '../assets/img/logo.png'
 export default function MyNavbar() {
-
 
 
   return (
     <>
-          <Navbar expand="lg" className="bg-body-tertiary">
-      <Container className='text-uppercase'>
-        <Navbar.Brand href="#home" className='fw-semibold'>mod pizza</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">location</Nav.Link>
-            <Nav.Link href="#link">menu</Nav.Link>
-            <Nav.Link href="#link">rewards</Nav.Link>
-            <NavDropdown title="about us" id="basic-nav-dropdown" className='text-capitalize'>
-              <NavDropdown.Item href="#action/3.1">our story</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.2">our purpose</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.3">playlist</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4"> MOD careers</NavDropdown.Item>
-            </NavDropdown>
-            <Button variant="danger" className='text-uppercase'>order</Button>
+    <Navbar expand="lg" className="bg-body-light border-bottom">
+        <Container className='text-uppercase'>
+          <Navbar.Brand href="#home" className='fw-semibold'><img src={img} alt="" width={200} height={50} /></Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Nav className='d-flex justify-content-between'>
+              <Nav.Link href="#home">location</Nav.Link>
+              <Nav.Link href="#link" className='mx-3'>menu</Nav.Link>
+              <Nav.Link href="#link">rewards</Nav.Link>
+              <NavDropdown title="ABOUT US" id="basic-nav-dropdown" className='text-capitalize mx-3'>
+                <NavDropdown.Item href="#action/3.1">our story</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.2">our purpose</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.3">playlist</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4"> MOD careers</NavDropdown.Item>
+              </NavDropdown>
+            <Button variant="danger" className='text-uppercase px-4'>order</Button>
           </Nav>
-        </Navbar.Collapse>
       </Container>
     </Navbar>
     </>

@@ -39,7 +39,7 @@ export default function MyFooter() {
                 <div className='d-flex fs-3 text-danger'>
                     <i className="bi bi-facebook"></i>
                     <i className="bi bi-twitter mx-3"></i>
-                    <i class="bi bi-instagram"></i>
+                    <i className="bi bi-instagram"></i>
                 </div>
                 </Col>
             </Row>
