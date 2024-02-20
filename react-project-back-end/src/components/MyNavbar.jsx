@@ -3,6 +3,7 @@ import { Navbar, Container, Nav, NavDropdown, Button } from 'react-bootstrap'
 import img from '../assets/img/logo.png'
 export default function MyNavbar() {
 
+  
 
   return (
     <>
@@ -25,7 +26,7 @@ export default function MyNavbar() {
               </NavDropdown>
             <Button variant="danger" className='text-uppercase px-4'>order</Button>
           </Nav>
-      </Container>
+        </Container>
     </Navbar>
     </>
   )

@@ -1,3 +1,3 @@
-const url = 'https://modpizza.com/wp-json';
-const userAPI = '/wp/v2/users';
-const postAPI = '/wp/v2/posts';
+export const url = 'https://modpizza.com/wp-json/wp/v2/';
+// const userAPI = 'users';
+// const postAPI = 'posts';
