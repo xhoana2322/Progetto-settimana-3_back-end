@@ -9,7 +9,7 @@ export default function DetailPost() {
     const [detail, setDetail] = useState({})
 
     useEffect(() => {
-        fetch(url + 'posts/' + id)
+        fetch(url + 'posts?_embed/' + id)
             .then((response) => response.json())
             .then((data) => {
               console.log(data)

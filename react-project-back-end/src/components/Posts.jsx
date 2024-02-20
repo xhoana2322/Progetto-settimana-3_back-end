@@ -79,7 +79,6 @@ export default function MyPost() {
                       </Button>
                   </div>
                 </div>
-                
               </Card.Body>
             </Card>
           ))
