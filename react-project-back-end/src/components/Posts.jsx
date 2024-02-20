@@ -16,7 +16,7 @@ export default function MyPost() {
   const [filteredPosts, setFilteredPosts] = useState([]);
 
   useEffect(() => {
-    fetch(url + "posts")
+    fetch(url + "posts?_embed")
       .then((response) => response.json())
       .then((data) => setPosts(data));
   }, []);
@@ -40,7 +40,7 @@ export default function MyPost() {
     <>
       <Form.Group className="mb-3 mt-4" onSubmit={handleSearch}>
         <Form.Control type="text"
-              placeholder="Cerca..."
+              placeholder="Search posts"
               className=" mr-sm-2"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}/>
@@ -52,19 +52,27 @@ export default function MyPost() {
             <Card
               key={post.id}
               className="col-lg-3 col-md-5 col-sm-12 mx-lg-1 mx-md-2 mx-sm-1 my-1"
-              style={{ height: "22rem" }}
+              style={{ height: "28 rem", width: "22rem" }}
             >
-              <Card.Img variant="top" src={post.yoast_head_json.og_image[0].url} />
-              <Card.Body>
+              <Card.Img variant="top" src={post._embedded['wp:featuredmedia']['0'].source_url} />
+              <Card.Body className="pb-0">
                 <Card.Title>{post.title.rendered}</Card.Title>
                 <Card.Text>
                   <span
                     dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
                   />
                 </Card.Text>
-                <Button variant="danger position-absolute bottom-0 my-2">
-                  Read more
-                </Button>
+                <div className="d-flex position-absolute bottom-0 w-100">
+                  <div className="fs-6 d-flex align-items-center justify-content-between w-100 my-auto text-secondary">
+                    <div>
+                      {post.yoast_head_json.author}
+                      <i className="bi bi-dot mx-0"></i>
+                      {post.date.slice(0, -9)}
+                    </div>
+                    <Button variant="danger p-1 px-2 my-2 me-4">Read more</Button>
+                  </div>
+                </div>
+                
               </Card.Body>
             </Card>
           ))
