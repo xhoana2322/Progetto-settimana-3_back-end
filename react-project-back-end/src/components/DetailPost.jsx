@@ -9,7 +9,7 @@ export default function DetailPost() {
     const [detail, setDetail] = useState({})
 
     useEffect(() => {
-        fetch(url + 'posts?_embed/' + id)
+        fetch(url + 'posts/' + id + '?_embed')
             .then((response) => response.json())
             .then((data) => {
               console.log(data)
@@ -26,17 +26,18 @@ export default function DetailPost() {
           <Card.Img variant="top" src={detail._embedded["wp:featuredmedia"][0].source_url} />
         )}
         <Card.Body>
+          <Card.Text className='fw-semibold'>
+            <span className='text-secondary'> {detail.date.slice(0, -9)} </span>
+            <br />
+            Author: {detail.author}
+          </Card.Text>
           <Card.Title>{detail.title && detail.title.rendered}</Card.Title>
           <Card.Text>
           <span
                     dangerouslySetInnerHTML={{ __html: detail.excerpt.rendered}}
                   />
           </Card.Text>
-          <Card.Text>
-            Date: {detail.date.slice(0, -9)}
-            <br />
-            Author: {detail.author}
-          </Card.Text>
+
         </Card.Body>
       </Card>
     )}
