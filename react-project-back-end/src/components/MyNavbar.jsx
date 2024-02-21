@@ -12,8 +12,8 @@ export default function MyNavbar() {
           <Navbar.Brand href="#home" className='fw-semibold'><img src={img} alt="" width={200} height={50} /></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Nav className='d-flex justify-content-between'>
-              <Nav.Link to="/" >home</Nav.Link>
-              <Nav.Link to="/users" className='mx-3'>users</Nav.Link>
+              <Nav.Link href='/' >home</Nav.Link>
+              <Nav.Link href='/users' className='mx-3'>users</Nav.Link>
               <Nav.Link href="#link">menu</Nav.Link>
               <NavDropdown title="ABOUT US" id="basic-nav-dropdown" className='text-capitalize mx-3'>
                 <NavDropdown.Item href="#action/3.1">our story</NavDropdown.Item>
