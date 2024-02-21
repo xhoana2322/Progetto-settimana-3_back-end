@@ -1,1 +1,11 @@
+.footer {
+    background-color: black;
+    color: rgb(199, 199, 199);
+    padding: 1rem;
+}
 
+footer a {
+    color: white;
+    text-decoration: capitalize;
+    font-weight: bold;
+}

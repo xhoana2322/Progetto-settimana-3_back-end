@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <>
         <MyNavbar />
-            <Container>
+            <Container className='my-4'>
               <Posts />
             </Container>
         <MyFooter />

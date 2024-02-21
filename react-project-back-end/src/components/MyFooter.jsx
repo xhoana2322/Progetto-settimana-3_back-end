@@ -8,7 +8,8 @@ import img from '../assets/img/app_store_google_play.png'
 export default function MyFooter() {
   return (
     <>
-        <footer className='container text-uppercase mt-4 py-5 border-top'>
+    {/* footer di MOD pizza che ho dovuto cambiare per adattarlo al sito di Ted Blog (è sotto) */}
+        {/* <footer className='container text-uppercase mt-4 py-5 border-top'>
             <Row>
                 <Col md={5} className='d-flex lh-lg'>
                     <div className='d-flex flex-column '>
@@ -49,6 +50,22 @@ export default function MyFooter() {
                 <Link>terms of use</Link>
                 <Link>multi-state privacy rights</Link>
                 <Link><i className="bi bi-toggle-on"></i>your privacy choices</Link>
+            </div>
+        </footer> */}
+
+        <footer className='footer d-flex justify-content-between align-items-center'>
+            <div className='d-flex text-capitalize'>
+                <a href="" className='text-decoration-none'>TED talks usage policy</a>
+                <a href="" className='text-decoration-none mx-3'>privacy policy</a>
+                <a href="" className='text-decoration-none'>advertising / partnership</a>
+                <a href="" className='text-decoration-none mx-3'>TED.com terms of usage</a>
+                <a href="" className='text-decoration-none'>contact</a>
+                <a href="" className='text-decoration-none mx-3'>jobs</a>
+                <a href="" className='text-decoration-none'>press</a>
+                <a href="" className='text-decoration-none mx-3'>help</a>
+            </div>
+            <div>
+                <p className='mb-0'>© TED conferance, LLC</p>
             </div>
         </footer>
     </>
